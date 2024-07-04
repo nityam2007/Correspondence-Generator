@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correspondence Generator</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h1 class="text-3xl font-bold mb-6 text-center">Correspondence Generator</h1>
+        <form id="correspondence-form" class="space-y-6">
+            <div>
+                <label for="sender" class="block text-sm font-medium text-gray-700">Sender:</label>
+                <input type="text" id="sender" name="sender" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="recipient" class="block text-sm font-medium text-gray-700">Recipient:</label>
+                <input type="text" id="recipient" name="recipient" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700">Subject:</label>
+                <input type="text" id="subject" name="subject" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+                <textarea id="message" name="message" rows="4" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+            </div>
+            <div>
+                <button type="submit"
+                    class="w-full bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Generate
+                    Correspondence</button>
+            </div>
+        </form>
+        <div id="generated-text" class="mt-6 p-4 bg-gray-50 rounded-lg shadow-sm whitespace-pre-line"></div>
+
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
