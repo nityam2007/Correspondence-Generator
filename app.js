@@ -9,13 +9,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-// Middleware
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-// Routes
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/views/index.html");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.post("/generate_text", async (req, res) => {
@@ -50,7 +48,6 @@ Message: ${message}`;
   });
 }
 
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on http://0.0.0.0:${port}`);
 });

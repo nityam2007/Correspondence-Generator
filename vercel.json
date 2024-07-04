@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/generate_text",
+        "methods": ["POST"],
+        "dest": "/app.js"
+      },
+      {
+        "src": "/",
+        "dest": "/public/index.html"
+      }
+    ],
+    "env": {
+      "GROQ_API_KEY": "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"
+    }
+  }
+  
