@@ -22,7 +22,7 @@
       }
     ],
     "env": {
-      "GROQ_API_KEY": "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"
+      "GROQ_API_KEY": "@GROQ_API_KEY"
     }
   }
   
